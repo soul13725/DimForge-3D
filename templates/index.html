@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STEP PMI Viewer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="panel">
+        <h1>CAD Viewer (STEP, DWG, DXF)</h1>
+        <form id="uploadForm">
+          <input id="stepFile" name="file" type="file" accept=".step,.stp,.dwg,.dxf" required />
+          <button type="submit">Upload & Visualize</button>
+        </form>
+        <p id="status">Upload a STEP/STP/DWG/DXF file to begin.</p>
+      </section>
+      <section id="viewer"></section>
+    </main>
+
+    <script type="module" src="{{ url_for('static', filename='js/viewer.js') }}"></script>
+  </body>
+  </html>
